@@ -36,11 +36,11 @@ function loadSavedData() {
 document.getElementById("Registration Form").addEventListener("Submit", function (event) {
     event.preventDefault();
 
-    var name = document.getElementById("Name").value;
-    var email = document.getElementById("Email").value;
-    var password = document.getElementById("Password").value;
-    var dob = document.getElementById("DOB").value;
-    var acceptTerms = document.getElementById("AcceptTerms").checked;
+    var Name = document.getElementById("Name").value;
+    var Email = document.getElementById("Email").value;
+    var Password = document.getElementById("Password").value;
+    var DOB = document.getElementById("DOB").value;
+    var AcceptTerms = document.getElementById("AcceptTerms?").checked;
 
     var formData = { Name: Name, Email: Email, Password: Password, DOB: DOB, AcceptTerms: AcceptTerms };
 
