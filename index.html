@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <script src="index.js" defer></script> <!-- Include index.js -->
 </head>
-
 <body>
 
     <form id="Registration Form">
@@ -23,24 +22,23 @@
         <input type="Date" id="DOB" onchange="validateDateOfBirth()" required>
 
         <label for="AcceptTerms">Accept Terms:</label>
-        <input type="Checkbox" id="AcceptTerms" required>
+        <input type="checkbox" id="AcceptTerms" required>
 
         <button type="Submit">Submit</button>
     </form>
+
     <table border="10">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>DOB</th>
-                <th>Accepted terms   ?</th>
+                <th>Dob</th>
+                <th>Accepted terms?</th>
             </tr>
         </thead>
-        <tbody id="TableBody"></tbody>
+        <tbody id="tableBody"></tbody>
     </table>
-
-    
 
 </body>
 </html>
