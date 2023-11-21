@@ -1,14 +1,14 @@
 // Function to validate the date of birth
 function validateDateOfBirth() {
     var dobInput = document.getElementById("DOB");
-    var dobValue = new Date(dobInput.value);
+    var dobValue = new Date(DOBInput.value);
     var currentDate = new Date();
     var minDate = new Date(currentDate.getFullYear() - 55, currentDate.getMonth(), currentDate.getDate());
     var maxDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
 
     if (dobValue < minDate || dobValue > maxDate) {
         alert("Date of birth must be between 18 and 55 years.");
-        dobInput.value = ""; // Clear the invalid date
+        DOBInput.value = ""; // Clear the invalid date
     } else {
         alert("Thank you for providing a valid date of birth.");
     }
@@ -20,11 +20,11 @@ function loadSavedData() {
     var tableBody = document.getElementById("TableBody");
 
     // Clear table body
-    tableBody.innerHTML = "";
+    TableBody.innerHTML = "";
 
     // Populate table with saved data
     savedData.forEach(function (data) {
-        var row = tableBody.insertRow();
+        var row = TableBody.insertRow();
         for (var key in data) {
             var cell = row.insertCell();
             cell.textContent = data[key];
@@ -33,14 +33,14 @@ function loadSavedData() {
 }
 
 // Function to handle form submission
-document.getElementById("RegistrationForm").addEventListener("Submit", function (event) {
+document.getElementById("Registration Form").addEventListener("Submit", function (event) {
     event.preventDefault();
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var dob = document.getElementById("dob").value;
-    var acceptTerms = document.getElementById("acceptTerms").checked;
+    var name = document.getElementById("Name").value;
+    var email = document.getElementById("Email").value;
+    var password = document.getElementById("Password").value;
+    var dob = document.getElementById("DOB").value;
+    var acceptTerms = document.getElementById("AcceptTerms").checked;
 
     var formData = { Name: Name, Email: Email, Password: Password, DOB: DOB, AcceptTerms: AcceptTerms };
 
