@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Registration Form</title>
-    <script src="index.js" defer></script> <!-- Include index.js -->
 </head>
+
 <body>
+    <div class="container">
+        <div class="error-msg"></div>
+        <form id="formData">
+            <h2>Registration Form</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div class="form-group checkbox">
+                <input type="checkbox" name="agree" id="agree" required>
+                <label for="agree">Accept Terms and Conditions</label>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
 
-    <form id="Registration Form">
-        <label for="Name">Name:</label>
-        <input type="Text" id="Name" required>
+    <div class="userinfo">
+        <h2>Submitted Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Date of Birth</th>
+                    <th>Accepted terms?</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
 
-        <label for="Email">Email:</label>
-        <input type="Email" id="Email" required>
-
-        <label for="Password">Password:</label>
-        <input type="Password" id="Password" required>
-
-        <label for="DOB">Date of Birth:</label>
-        <input type="Date" id="DOB" onchange="validateDateOfBirth()" required>
-
-        <label for="AcceptTerms">Accept Terms:</label>
-        <input type="Checkbox" id="AcceptTerms" required>
-
-        <button type="Submit">Submit</button>
-    </form>
-
-    <table border="10">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Dob</th>
-                <th>Accepted terms?</th>
-            </tr>
-        </thead>
-        <tbody id="TableBody"></tbody>
-    </table>
-
+    <script src="index.js"></script>
 </body>
+
 </html>
