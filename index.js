@@ -1,6 +1,6 @@
 // Function to validate the date of birth
 function validateDateOfBirth() {
-    var dobInput = document.getElementById("dob");
+    var dobInput = document.getElementById("DOB");
     var dobValue = new Date(dobInput.value);
     var currentDate = new Date();
     var minDate = new Date(currentDate.getFullYear() - 55, currentDate.getMonth(), currentDate.getDate());
@@ -16,8 +16,8 @@ function validateDateOfBirth() {
 
 // Function to load saved data from web storage
 function loadSavedData() {
-    var savedData = JSON.parse(localStorage.getItem("registrationData")) || [];
-    var tableBody = document.getElementById("tableBody");
+    var savedData = JSON.parse(localStorage.getItem("RegistrationData")) || [];
+    var tableBody = document.getElementById("TableBody");
 
     // Clear table body
     tableBody.innerHTML = "";
@@ -33,7 +33,7 @@ function loadSavedData() {
 }
 
 // Function to handle form submission
-document.getElementById("registrationForm").addEventListener("submit", function (event) {
+document.getElementById("RegistrationForm").addEventListener("Submit", function (event) {
     event.preventDefault();
 
     var name = document.getElementById("name").value;
@@ -42,12 +42,12 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     var dob = document.getElementById("dob").value;
     var acceptTerms = document.getElementById("acceptTerms").checked;
 
-    var formData = { name: name, email: email, password: password, dob: dob, acceptTerms: acceptTerms };
+    var formData = { Name: Name, Email: Email, Password: Password, DOB: DOB, AcceptTerms: AcceptTerms };
 
     // Save data to web storage
-    var savedData = JSON.parse(localStorage.getItem("registrationData")) || [];
+    var savedData = JSON.parse(localStorage.getItem("RegistrationData")) || [];
     savedData.push(formData);
-    localStorage.setItem("registrationData", JSON.stringify(savedData));
+    localStorage.setItem("RegistrationData", JSON.stringify(savedData));
 
     // Load and display saved data
     loadSavedData();
